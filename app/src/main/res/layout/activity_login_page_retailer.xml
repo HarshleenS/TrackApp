@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginPageRetailer"
+    android:background="#fff"
+    android:paddingTop="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_gravity="center"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:id="@+id/textL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login to continue"
+                android:layout_gravity="right"
+                android:textSize="18sp"
+                android:layout_marginBottom="30dp"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailInLoginRetailer"
+                android:layout_below="@id/textL"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Email"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:inputType="textEmailAddress"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/passwordInLoginRetailer"
+                android:layout_below="@id/emailInLoginRetailer"
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Password"
+                app:passwordToggleEnabled="true"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberPassword"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/greycircle"
+                android:elevation="10dp"
+                android:visibility="gone"
+                android:id="@+id/loginProgressbar"
+                android:padding="20dp">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"/>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+<!--        <Button-->
+<!--            android:id="@+id/btnForgotRetailer"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="right"-->
+<!--            android:layout_margin="5dp"-->
+<!--            android:background="#f2f2f2"-->
+<!--            android:elevation="2dp"-->
+<!--            android:fontFamily="sans-serif"-->
+<!--            android:text="Forgot password?" />-->
+
+        <Button
+            android:id="@+id/btnLoginNowRetailer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ebf8f9"
+            android:elevation="2dp"
+            android:text="Login"
+            android:fontFamily="sans-serif"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
