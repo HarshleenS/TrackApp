@@ -26,16 +26,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
-
-
             <TextView
                 android:id="@+id/textTop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enter your details below"
                 android:layout_gravity="right"
-                android:textSize="18sp"
-                android:layout_marginBottom="30dp"/>
+                android:layout_marginBottom="30dp"
+                android:text="Enter your details below"
+                android:textSize="18sp" />
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -57,8 +55,24 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/emailInRegister"
+                android:id="@+id/nameInRegister"
                 android:layout_below="@id/phoneNumberInRegister"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Name"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailInRegister"
+                android:layout_below="@id/nameInRegister"
                 android:hint="Email"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 >
@@ -153,6 +167,7 @@
             android:text="Already registered? Login"
             android:textColor="#e6f7ff"
             android:textSize="20dp" />
+
 
 
 

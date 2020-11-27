@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomePageRetailer"></activity>
+        <activity
+            android:name=".RegisterPageRetailer"
+            android:label="@string/title_activity_register_page_retailer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".HomePageRetailer" />
         <activity android:name=".HomePageWarehouse" />
         <activity android:name=".HomePage" />
         <activity android:name=".RegisterPage" />
