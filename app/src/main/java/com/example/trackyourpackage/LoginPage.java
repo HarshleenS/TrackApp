@@ -122,7 +122,7 @@ public class LoginPage extends AppCompatActivity
 
     public void onBackPressed(){
 
-        startActivity(new Intent(getApplicationContext(), SelectLoginPage.class));
+        //startActivity(new Intent(getApplicationContext(), SelectLoginPage.class));
         finish();
 
         return;
@@ -142,6 +142,7 @@ public class LoginPage extends AppCompatActivity
                 if(customerData.getPassword().equals(passwordL))
                 {
                     Toast.makeText(LoginPage.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    finish();
 
 
                     Intent intent=new Intent(LoginPage.this,HomePage.class);

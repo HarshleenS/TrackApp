@@ -100,13 +100,17 @@ public class SelectLoginPage extends AppCompatActivity {
 
                         Intent intent=new Intent(SelectLoginPage.this,HomePage.class);
                         startActivity(intent);
+                        finish();
                     }
-                    else
+                    else {
                         Toast.makeText(SelectLoginPage.this, "Incorrect password", Toast.LENGTH_SHORT).show();
+                        Paper.book().destroy();
+                    }
                 }
                 else
                 {
                     Toast.makeText(SelectLoginPage.this, "Login failed. User not found or wrong credentials entered", Toast.LENGTH_SHORT).show();
+                    Paper.book().destroy();
                     Intent intent=new Intent(SelectLoginPage.this,RegisterPage.class);
                     startActivity(intent);
                 }

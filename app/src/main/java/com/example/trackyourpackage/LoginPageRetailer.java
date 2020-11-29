@@ -88,8 +88,8 @@ public class LoginPageRetailer extends AppCompatActivity {
     public void onBackPressed()
     {
 
-        startActivity(new Intent(getApplicationContext(), SelectLoginPage.class));
-        Paper.book().destroy();
+        //startActivity(new Intent(getApplicationContext(), SelectLoginPage.class));
+        //Paper.book().destroy();
         finish();
 
         return;
@@ -111,7 +111,7 @@ public class LoginPageRetailer extends AppCompatActivity {
                         Toast.makeText(LoginPageRetailer.this, "Login Successful", Toast.LENGTH_SHORT).show();
 
 
-                        Intent intent=new Intent(LoginPageRetailer.this,HomePageRetailer.class);
+                        Intent intent=new Intent(LoginPageRetailer.this,ProductsCategoryRetailer.class);
                         startActivity(intent);
                     }
                     else

@@ -19,7 +19,7 @@ public class HomePageRetailer extends AppCompatActivity {
     public void onBackPressed(){
         Paper.book().destroy();
 
-        startActivity(new Intent(getApplicationContext(), SelectLoginPage.class));
+        //startActivity(new Intent(getApplicationContext(), SelectLoginPage.class));
         finish();
 
         return;

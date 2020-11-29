@@ -49,7 +49,7 @@ public class HomePage extends AppCompatActivity {
 
     public void onBackPressed(){
 
-        startActivity(new Intent(getApplicationContext(), SelectLoginPage.class));
+        //startActivity(new Intent(getApplicationContext(),LoginPage.class));
         finish();
                 // I'm here
         return;

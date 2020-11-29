@@ -122,7 +122,7 @@ public class RegisterPageRetailer extends AppCompatActivity {
                 public void onBackPressed()
                 {
 
-                    Paper.book().destroy();
+                    //Paper.book().destroy();
                     startActivity(new Intent(getApplicationContext(), SelectLoginPage.class));
                     finish();
 
@@ -149,8 +149,8 @@ public class RegisterPageRetailer extends AppCompatActivity {
                                     { if(task.isSuccessful())
                                     {
                                         Toast.makeText(RegisterPageRetailer.this, "Your account is successfully created!-Retailer", Toast.LENGTH_SHORT).show();
-                                        //Intent intent = new Intent(RegisterPageRetailer.this, HomePage.class);
-                                        //startActivity(intent);
+                                        Intent intent = new Intent(RegisterPageRetailer.this, ProductsCategoryRetailer.class);
+                                        startActivity(intent);
                                     }
                                     else
                                         Toast.makeText(RegisterPageRetailer.this,"Network error!Please try again-retailer.",Toast.LENGTH_SHORT).show();
