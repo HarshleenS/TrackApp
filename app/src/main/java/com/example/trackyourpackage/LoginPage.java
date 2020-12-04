@@ -145,7 +145,7 @@ public class LoginPage extends AppCompatActivity
                     finish();
 
 
-                    Intent intent=new Intent(LoginPage.this,HomePage.class);
+                    Intent intent=new Intent(LoginPage.this,Display.class);
                     startActivity(intent);
                 }
                 else
