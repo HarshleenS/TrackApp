@@ -98,7 +98,7 @@ public class SelectLoginPage extends AppCompatActivity {
                         Toast.makeText(SelectLoginPage.this, "Login Successful", Toast.LENGTH_SHORT).show();
 
 
-                        Intent intent=new Intent(SelectLoginPage.this,HomePage.class);
+                        Intent intent=new Intent(SelectLoginPage.this,Display.class);
                         startActivity(intent);
                         finish();
                     }
