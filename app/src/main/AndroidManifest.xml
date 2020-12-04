@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Display"
+            android:label="@string/title_activity_display"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".AddNewProduct"
             android:label="@string/title_activity_add_new_product"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ProductsCategoryRetailer"
             android:label="@string/title_activity_products_category_retailer"

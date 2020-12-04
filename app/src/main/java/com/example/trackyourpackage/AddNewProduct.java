@@ -82,13 +82,12 @@ public class AddNewProduct extends AppCompatActivity {
     }
 
 
-    public void onBackPressed(){
-        //Paper.book().destroy();
+    public void onBackPressed()
+    {
 
-        //startActivity(new Intent(getApplicationContext(), SelectLoginPage.class));
         finish();
 
-        return;
+
     }
     private void OpenGallery()
     {
@@ -219,6 +218,7 @@ public class AddNewProduct extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()) {
                     Toast.makeText(AddNewProduct.this, "Product added successfully to shopping window", Toast.LENGTH_SHORT).show();
+                    finish();
                     Intent intent=new Intent(AddNewProduct.this,ProductsCategoryRetailer.class);
                     startActivity(intent);
                 }
@@ -237,5 +237,6 @@ public class AddNewProduct extends AppCompatActivity {
 
 
     }
+
 
 }
