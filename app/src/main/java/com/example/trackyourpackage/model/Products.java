@@ -21,11 +21,11 @@ public class Products
     }
 
 
-    public String getname() {
+    public String getName() {
         return name;
     }
 
-    public void setname(String nname) {
+    public void setName(String name) {
         this.name = name;
     }
 

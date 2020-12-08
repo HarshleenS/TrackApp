@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.widget.Toast;
 
 import com.example.trackyourpackage.ViewHolder.ProductViewHolder;
 import com.example.trackyourpackage.model.Products;
@@ -120,9 +121,12 @@ public class Display extends AppCompatActivity {
                     @Override
                     protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull Products model)
                     {
-                       // holder.txtProductName.setText(model.getname());
-                        //holder.txtProductDescription.setText(model.getDescription());
-                       // holder.txtProductPrice.setText("Price = " + model.getPrice() + "$");
+                        holder.txtProductName.setText(model.getName());
+                        holder.txtProductDescription.setText(model.getDescription());
+                        holder.txtProductPrice.setText("Price = Rs" + model.getPrice());
+                       // Toast.makeText(Display.this,model.getName()+"Hello nam",Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(Display.this,model.getDescription()+"Hello des",Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(Display.this,model.getPrice()+"Hello pr",Toast.LENGTH_SHORT).show();
                         Picasso.get().load(model.getImage()).into(holder.imageView);
                     }
 

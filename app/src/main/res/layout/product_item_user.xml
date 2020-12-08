@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 <TextView
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
     android:text="Product_Name"
     android:textAlignment="center"
@@ -20,10 +20,10 @@
     android:textStyle="bold"
     android:textColor="@color/colorAccent"
     android:textSize="20sp"
-    android:id="@+id/Product_Name"/>
+    android:id="@+id/product_name"/>
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="400dp"
             android:layout_below="@+id/product_name"
             android:scaleType="centerCrop"
             android:layout_marginTop="2dp"
