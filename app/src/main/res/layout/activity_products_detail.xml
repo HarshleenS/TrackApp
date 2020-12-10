@@ -62,14 +62,14 @@
         android:layout_centerHorizontal="true"
 
         />
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="6dp"
         android:backgroundTint="@color/colorAccent"
-        android:src="@drawable/nav_cart"
+        android:text="Add to cart"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
         android:id="@+id/add_product_to_cart"
         />
 

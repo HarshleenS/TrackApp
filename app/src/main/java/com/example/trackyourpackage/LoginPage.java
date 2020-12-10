@@ -142,6 +142,7 @@ public class LoginPage extends AppCompatActivity
                 if(customerData.getPassword().equals(passwordL))
                 {
                     Toast.makeText(LoginPage.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    PrevalentCustomer.currentonlineUser = customerData;
                     finish();
 
 

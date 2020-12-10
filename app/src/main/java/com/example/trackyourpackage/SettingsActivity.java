@@ -66,7 +66,7 @@ public class SettingsActivity extends AppCompatActivity {
         saveTextButton = (TextView) findViewById(R.id.edit_setT_btn);
 
 
-        //userInfoDisplay(profileImageView, fullNameEditText, userPhoneEditText, addressEditText);
+        userInfoDisplay(profileImageView, fullNameEditText, userPhoneEditText, addressEditText);
         closeTextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)

@@ -96,6 +96,8 @@ public class SelectLoginPage extends AppCompatActivity {
                     if(customerData.getPassword().equals(customerPasswordKey))
                     {
                         Toast.makeText(SelectLoginPage.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        PrevalentCustomer.currentonlineUser = customerData;
+
 
 
                         Intent intent=new Intent(SelectLoginPage.this,Display.class);

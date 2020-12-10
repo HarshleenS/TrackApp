@@ -2,7 +2,7 @@ package com.example.trackyourpackage.model;
 
 public class Products
 {
-    private String name, description, price, image, category, pid, date, time;
+    private String name, description, price, image, category, pid, date, time,phone;
 
     public Products()
     {
@@ -18,6 +18,7 @@ public class Products
         this.pid = pid;
         this.date = date;
         this.time = time;
+
     }
 
 
@@ -77,9 +78,12 @@ public class Products
         this.date = date;
     }
 
+
     public String getTime() {
         return time;
     }
+
+
 
     public void setTime(String time) {
         this.time = time;

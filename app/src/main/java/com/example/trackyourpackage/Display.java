@@ -67,8 +67,8 @@ public class Display extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+              Intent intent=new Intent(Display.this,CartActivity.class);
+              startActivity(intent);
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -188,7 +188,8 @@ public class Display extends AppCompatActivity
 
         if (id == R.id.nav_cart)
         {//Toast.makeText(Display.this,"ooo hello",Toast.LENGTH_SHORT).show();
-
+            Intent intent=new Intent(Display.this,CartActivity.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_orders)
         {
