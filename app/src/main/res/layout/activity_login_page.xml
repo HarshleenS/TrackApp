@@ -45,12 +45,12 @@
                 android:layout_below="@id/text2"
 
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="Email"
+                android:hint="phone"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:inputType="textEmailAddress"
+                    android:inputType="phone"
                     android:layout_height="wrap_content"/>
 
             </com.google.android.material.textfield.TextInputLayout>

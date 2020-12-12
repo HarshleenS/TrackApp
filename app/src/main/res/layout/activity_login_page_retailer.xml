@@ -44,7 +44,7 @@
                 android:id="@+id/emailInLoginRetailer"
                 android:layout_below="@id/textL"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="Email"
+                android:hint="Phone"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -115,6 +115,18 @@
             android:text="Login"
             android:fontFamily="sans-serif"
             android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/RegisterRetailer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#000000"
+            android:elevation="2dp"
+            android:fontFamily="sans-serif"
+            android:text="New user? Register"
+            android:textColor="#e6f7ff"
             android:textSize="20dp" />
 
 

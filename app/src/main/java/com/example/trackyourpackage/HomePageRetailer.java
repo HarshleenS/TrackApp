@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import io.paperdb.Paper;
+
 public class HomePageRetailer extends AppCompatActivity {
 
     @Override
@@ -15,8 +17,10 @@ public class HomePageRetailer extends AppCompatActivity {
 
 
     public void onBackPressed(){
+        Paper.book().destroy();
 
-        startActivity(new Intent(getApplicationContext(), SelectLoginPage.class));
+        //startActivity(new Intent(getApplicationContext(), SelectLoginPage.class));
+        finish();
 
         return;
     }
