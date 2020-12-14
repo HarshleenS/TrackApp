@@ -180,7 +180,7 @@ public class RegisterPage extends AppCompatActivity {
                 userDataMap.put("name",namep);
                 userDataMap.put("email",emailp);
                 userDataMap.put("password",password);
-
+                userDataMap.put("phone",phonep);
                 userDataMap.put("address",addressp);
                 Rootref.child("Users").child(phonep).updateChildren(userDataMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
