@@ -25,7 +25,7 @@ import java.util.HashMap;
 public class RegisterPage extends AppCompatActivity {
 
     Button btn_registerNewUser, btn_goBackToLogin;
-    TextInputLayout textPhoneNumber, textEmail, textPassword, textPassword2,textName;
+    TextInputLayout textPhoneNumber, textEmail, textPassword, textPassword2,textName,textAddress;
     ProgressBar progressBarRegister;
 
     //private FirebaseAuth firebaseAuth;
@@ -46,6 +46,7 @@ public class RegisterPage extends AppCompatActivity {
         textPassword = findViewById(R.id.passwordInRegister);
         textPassword2 = findViewById(R.id.passwordInRegister2);
         textName=findViewById(R.id.nameInRegister);
+        textAddress=findViewById(R.id.addressUser);
 
         btn_goBackToLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,10 +64,12 @@ public class RegisterPage extends AppCompatActivity {
             {
 
                 String email = textEmail.getEditText().getText().toString().trim();
+               // Toast.makeText(RegisterPage.this,"email"+email,Toast.LENGTH_LONG).show();
                 String phone = textPhoneNumber.getEditText().getText().toString().trim();
                 String password = textPassword.getEditText().getText().toString().trim();
                 String password2 = textPassword2.getEditText().getText().toString().trim();
                 String name=textName.getEditText().getText().toString().trim();
+                String address=textAddress.getEditText().getText().toString().trim();
                 if(TextUtils.isEmpty(phone)||phone.length()<10){
                     Toast.makeText(RegisterPage.this, "Enter valid phone", Toast.LENGTH_SHORT).show();
                     return;
@@ -78,7 +81,7 @@ public class RegisterPage extends AppCompatActivity {
 
 
                 else if(TextUtils.isEmpty(email)){
-                    Toast.makeText(RegisterPage.this, "Enter valid email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterPage.this, "Enter valid email ", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 else if(TextUtils.isEmpty(password) || password.length()<6)
@@ -97,6 +100,11 @@ public class RegisterPage extends AppCompatActivity {
                     Toast.makeText(RegisterPage.this, "Enter correct password again", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                else if (TextUtils.isEmpty(address))
+                {
+                    Toast.makeText(RegisterPage.this, "Enter correct address again", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 else
                 {
 //                    loadingBar.setTitle("Create Account");
@@ -104,7 +112,7 @@ public class RegisterPage extends AppCompatActivity {
 ////                    loadingBar.setCanceledOnTouchOutside(false);
 ////                    loadingBar.show();
                     Toast.makeText(RegisterPage.this, "Please wait while we check the credentials!", Toast.LENGTH_SHORT).show();
-                    Validate(phone,name,email,password);
+                    Validate(phone,name,email,password,address);
                     return;
                 }
 
@@ -159,7 +167,7 @@ public class RegisterPage extends AppCompatActivity {
         return;
     }
 
-    private void Validate(final String phonep,final String namep, final String emailp, final String password)
+    private void Validate(final String phonep,final String namep, final String emailp, final String password,final  String addressp)
     {final DatabaseReference Rootref;
     Rootref= FirebaseDatabase.getInstance().getReference();
     Rootref.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -172,14 +180,15 @@ public class RegisterPage extends AppCompatActivity {
                 userDataMap.put("name",namep);
                 userDataMap.put("email",emailp);
                 userDataMap.put("password",password);
-                userDataMap.put("phone",phonep);
+
+                userDataMap.put("address",addressp);
                 Rootref.child("Users").child(phonep).updateChildren(userDataMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task)
                     { if(task.isSuccessful())
                     {
                         Toast.makeText(RegisterPage.this, "Your account is successfully created!", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(RegisterPage.this, HomePage.class);
+                        Intent intent = new Intent(RegisterPage.this, Display.class);
                         startActivity(intent);
                     }
                     else

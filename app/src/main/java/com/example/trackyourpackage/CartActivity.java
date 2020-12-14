@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +42,8 @@ public class CartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(CartActivity.this,"Order Placed",Toast.LENGTH_SHORT).show();
+                Intent itt=new Intent(CartActivity.this,HomePage.class);
+                startActivity(itt);
             }
         });
 
